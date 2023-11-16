@@ -66,9 +66,9 @@ CREATE TABLE `przetwory` (
 ```sql
 CREATE TABLE statek(
 	nazwa_statku VARCHAR(40) PRIMARY KEY,
-    rodzaj_statku enum('wioslowy', 'zaglowy', 'wojskowy'),
-    data_wodowania SMALLINT,
-    max_ladownosc INT UNSIGNED
+	rodzaj_statku enum('wioslowy', 'zaglowy', 'wojskowy'),
+	data_wodowania SMALLINT,
+	max_ladownosc INT UNSIGNED
 )
 ```
 
@@ -95,4 +95,9 @@ DELETE FROM izba WHERE nazwa_izby="spizarnia";
 
 ```sql
 DROP TABLE izba;
+```
+
+## lab 5
+```
+DELETE FROM postac WHERE nazwa != 'Bjorn' AND rodzaj='wiking' ORDER BY wiek DESC LIMIT 2;
 ```
