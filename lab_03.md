@@ -62,3 +62,37 @@ CREATE TABLE `przetwory` (
     FOREIGN KEY(id_konsumenta) REFERENCES postac(id)
 )
 ```
+
+```sql
+CREATE TABLE statek(
+	nazwa_statku VARCHAR(40) PRIMARY KEY,
+    rodzaj_statku enum('wioslowy', 'zaglowy', 'wojskowy'),
+    data_wodowania SMALLINT,
+    max_ladownosc INT UNSIGNED
+)
+```
+
+```sql
+ALTER TABLE postac ADD COLUMN funckja VARCHAR(40);
+```
+
+```sql
+UPDATE postac SET funckja='kapitan' WHERE nazwa='Bjorn'
+```
+
+```sql
+ALTER TABLE postac ADD COLUMN statek VARCHAR(40);
+ALTER TABLE postac ADD FOREIGN KEY (statek) REFERENCES statek(nazwa_statku);
+```
+
+```sql
+UPDATE postac SET statek='statek wojskowy' WHERE rodzaj="wiking" OR nazwa="Drozd";
+```
+
+```sql
+DELETE FROM izba WHERE nazwa_izby="spizarnia";
+```
+
+```sql
+DROP TABLE izba;
+```
