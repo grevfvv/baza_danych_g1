@@ -49,3 +49,16 @@ CREATE TABLE izba(
     PRIMARY KEY(adres_budynku, nazwa_izby),
     FOREIGN KEY(wlasciciel) REFERENCES postac(id) ON DELETE SET NULL);
 ```
+
+```sql
+CREATE TABLE `przetwory` (
+    `id` int PRIMARY KEY AUTO_INCREMENT,
+    `rok_produkcji` int DEFAULT,
+    `id_wykonawcy` int DEFAULT,
+    `zawartosc` varchar(40) DEFAULT,
+    `dodatek` varchar(40) DEFAULT ('papryczka chilli'),
+    `id_konsumenta` int DEFAULT,
+    FOREIGN KEY(id_wykonawcy) REFERENCES postac(id),
+    FOREIGN KEY(id_konsumenta) REFERENCES postac(id)
+)
+```
