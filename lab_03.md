@@ -97,12 +97,12 @@ DELETE FROM izba WHERE nazwa_izby="spizarnia";
 DROP TABLE izba;
 ```
 
-## lab 5
+# lab 5
 ```sql
 DELETE FROM postac WHERE nazwa != 'Bjorn' AND rodzaj='wiking' ORDER BY wiek DESC LIMIT 2;
 ```
 
-1.b
+### 1.b
 ```sql
 ALTER TABLE walizka DROP FOREIGN KEY walizka_ibfk_1;
 ALTER TABLE przetwory DROP FOREIGN KEY przetwory_ibfk_1;
@@ -115,7 +115,7 @@ ALTER TABLE postac drop PRIMARY KEY;
 SHOW CREATE TABLE postac;
 ```
 
-#zad 2
+### zad 2
 ```sql
 ALTER TABLE postac ADD COLUMN pesel CHAR(11) first;
 UPDATE postac SET pesel='756753178' + id;
@@ -162,7 +162,7 @@ ALTER TABLE postac MODIFY rodzaj enum('wiking','ptak','kobieta','syrenka', 'waz'
 INSERT INTO postac VALUES('1255125120', 'Loko', 'waz', '1120-01-01', 900, NULL, NULL, NULL);
 ```
 
-## zad 5
+### zad 5
 ```sql
 UPDATE postac SET id_statku=NULL;
 UPDATE marynarz SET id_statku=NULL;
