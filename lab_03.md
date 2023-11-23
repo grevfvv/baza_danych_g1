@@ -162,7 +162,7 @@ ALTER TABLE postac MODIFY rodzaj enum('wiking','ptak','kobieta','syrenka', 'waz'
 INSERT INTO postac VALUES('1255125120', 'Loko', 'waz', '1120-01-01', 900, NULL, NULL, NULL);
 ```
 
-# zad 5
+## zad 5
 ```sql
 UPDATE postac SET id_statku=NULL;
 UPDATE marynarz SET id_statku=NULL;
